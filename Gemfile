@@ -20,6 +20,12 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
 gem 'devise'
+# Use devise for create users
+gem 'carrierwave', '~> 2.0'
+# Use carriewave for add image to article
+gem "mini_magick"
+# Use minimagick for edit images size
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

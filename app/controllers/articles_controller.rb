@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
   def edit;end
 
   def update
-    if @article.update_attributes(article_params)
+    if @article.update(article_params)
       redirect_to @article, success: 'Article successfully updated'
     else
       flash[:danger] = 'Article not updated'
@@ -44,6 +44,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :content, :published, :private)
+    params.require(:article).permit(:title, :content, :published, :private, :image)
   end
 end
