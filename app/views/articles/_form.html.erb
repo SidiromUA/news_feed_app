@@ -1,15 +1,16 @@
 <%= form_for @article do |f| %>
   <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.label :title %><br>
+    <%= f.text_field :title, class: 'form-controll' %>
   <div>
 
   <div class="form-group">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
+    <%= f.label :content %><br>
+    <%= f.text_area :content, class: 'form-controll' %>
   <div>
 
-  <div class="btn btn-primary">
-    <%= f.submit class:'btn btn-primary' 'Save' %>
+  <div class="form-group">
+    <%= f.submit 'Save', class:'btn btn-primary' %>
+    <%= link_to 'Back', :back, class:'btn btn-outline-secondary' %>
   <div>
 <% end %>
