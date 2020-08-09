@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  root to: "articles#index"
   devise_for :admins
   devise_for :users
   resources :application
-  root to: "application#index"
+  resources :articles
 end
