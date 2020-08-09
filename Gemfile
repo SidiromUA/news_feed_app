@@ -25,7 +25,8 @@ gem 'carrierwave', '~> 2.0'
 # Use carriewave for add image to article
 gem "mini_magick"
 # Use minimagick for edit images size
-
+gem 'will_paginate-bootstrap4'
+# Use articles pagination
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
