@@ -1,3 +1,7 @@
 <h1>Articles</h1>
 
 <%= render @articles %>
+
+<%= paginate @articles, theme: 'twitter-bootstrap-4',
+                        pagination_class: "pagination-sm", 
+                        nav_class: "d-inline-b" %>

@@ -31,8 +31,9 @@ gem 'pundit'
 gem 'carrierwave', '~> 2.0'
 # Use minimagick for edit images size
 gem "mini_magick"
-gem 'kaminari'
 # Use kaminari paginations for Adminpanel
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

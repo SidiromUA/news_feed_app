@@ -15,7 +15,7 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
+import 'bootstrap'
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
