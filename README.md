@@ -1,24 +1,41 @@
-# README
+# news_feed_app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Setup
 
-Things you may want to cover:
+App requires [Ruby](https://www.ruby-lang.org/en/) v2.6.3 to run.
 
-* Ruby version
+Install the dependencies and start the server.
 
-* System dependencies
+```sh
+$ git git@github.com:SidiromUA/news_feed_app.git
+$ cd news_feed_app
+$ rvm use ruby-2.6.3
+# If you do not have installed this version of ruby please install it.
+$ rvm install 2.6.3 # or $ rvm install ruby-2.6.3
+$ bundle
+```
 
-* Configuration
+```sh
+$ rails db:setup
+```
 
-* Database creation
+```sh
+$ rails db:seed
+```
 
-* Database initialization
+```sh
+$ yarn install --check-files
+```
 
-* How to run the test suite
+```sh
+$ rails s
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Adminpanel
 
-* Deployment instructions
-
-* ...
+```sh
+URN: /admin
+```
+```sh
+email: 'admin@example.com', password: 'password'
+```
