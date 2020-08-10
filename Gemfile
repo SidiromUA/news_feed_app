@@ -19,14 +19,21 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
-gem 'devise'
 # Use devise for create users
-gem 'carrierwave', '~> 2.0'
+gem 'devise'
+gem 'activeadmin'
+
+# Plus integrations with:
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
 # Use carriewave for add image to article
-gem "mini_magick"
+gem 'carrierwave', '~> 2.0'
 # Use minimagick for edit images size
-gem 'will_paginate-bootstrap4'
-# Use articles pagination
+gem "mini_magick"
+gem 'kaminari'
+# Use kaminari paginations for Adminpanel
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
