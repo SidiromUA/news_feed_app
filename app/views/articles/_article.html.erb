@@ -1,3 +1,4 @@
+<% if article.published %>
 <article class="article">
   <section class="article-head">
     <h2><%= link_to article.title, article_path(article) %></h2>
@@ -7,6 +8,7 @@
   </section>
   <section class="article-summary clearfix">
     <%= image_tag article.image.url(:thumb), class: 'img-thumbnail thumb' if article.image? %>
-    <%= article.content %>
+    <%= article.content if article.published %>
   </section>
 </article>
+<% end %>

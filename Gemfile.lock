@@ -81,10 +81,10 @@ GEM
     bindex (0.8.1)
     bootsnap (1.4.7)
       msgpack (~> 1.0)
-    bootstrap (4.5.0)
-      autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 1.14.3, < 2)
-      sassc-rails (>= 2.0.0)
+    bootstrap (4.0.0)
+      autoprefixer-rails (>= 6.0.3)
+      popper_js (>= 1.12.9, < 2)
+      sass (>= 3.5.2)
     bootstrap4-kaminari-views (1.0.1)
       kaminari (>= 0.13)
       rails (>= 3.1)
@@ -151,6 +151,10 @@ GEM
       activerecord
       kaminari-core (= 1.2.1)
     kaminari-core (1.2.1)
+    launchy (2.5.0)
+      addressable (~> 2.7)
+    letter_opener (1.7.0)
+      launchy (~> 2.2)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -289,7 +293,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   bootsnap (>= 1.4.2)
-  bootstrap (~> 4.5.0)
+  bootstrap (= 4.0.0)
   bootstrap4-kaminari-views
   byebug
   cancancan
@@ -299,6 +303,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   jquery-rails
   kaminari
+  letter_opener
   listen (>= 3.0.5, < 3.2)
   mini_magick
   pg (>= 0.18, < 2.0)
