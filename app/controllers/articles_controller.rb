@@ -1,12 +1,13 @@
 class ArticlesController < ApplicationController
-
   before_action :find_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @articles = Article.order(:title).page(params[:page])
+    @articles = Article.published.page(params[:page])
   end
 
-  def show;end
+  def show
+    @article = Article.published.find(params[:id])
+  end
 
   def new
     @article = Article.new
