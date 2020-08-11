@@ -3,12 +3,12 @@
     <h2><%= @article.title %></h2>
     <small>
       <time><%= @article.created_at.to_date.strftime("%d %B, %Y") %></time>
-      <%= link_to 'Edit', edit_article_path(@article) %>
-      <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Back', articles_path %>
     </small>
   </section>
   <section class="article-body">
     <%= image_tag @article.image.url(:large), class: 'img-show' if @article.image? %>
-    <%= @article.content %>
+    <%= @article.content %><br>
+    <%= link_to 'Back', articles_path %>
   </section>
 </article>
