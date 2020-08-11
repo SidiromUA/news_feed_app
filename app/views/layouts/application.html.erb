@@ -18,6 +18,15 @@
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+        <% if user_signed_in? %>
+          <%= link_to 'Adminpanel', admin_user_session_path, class: "nav-link" %>
+        <% end %>
+        </li>
+      </ul>
+    </div>
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
         <% if user_signed_in? %>
