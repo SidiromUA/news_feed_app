@@ -2,11 +2,19 @@ class ArticlesController < ApplicationController
   before_action :find_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @articles = Article.published.page(params[:page])
+    if user_signed_in?
+      @articles = Article.published.page(params[:page])
+    else 
+      @articles = Article.covered.published.page(params[:page])
+    end
   end
 
   def show
-    @article = Article.published.find(params[:id])
+    if user_signed_in?
+      @article = Article.published.find(params[:id])
+    else 
+      @article = Article.covered.published.find(params[:id])
+    end
   end
 
   def new
