@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :find_article, only: [:show, :edit, :update, :destroy]
+  rescue_from ActiveRecord::RecordNotFound, with: :handle_record_not_found
 
   def index
     if user_signed_in?
@@ -54,5 +55,9 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:title, :content, :published, :private, :image)
+  end
+
+  def handle_record_not_found
+    render file: "#{Rails.root}/public/404.html" , status: 404
   end
 end
