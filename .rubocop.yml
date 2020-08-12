@@ -1,0 +1,32 @@
+AllCops:
+  TargetRubyVersion: 2.5
+  DisplayCopNames: true
+  Exclude:
+    - 'test/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'Gemfile'
+    - 'bin/*'
+    - 'node_modules/**/**/**/**/*'
+    - 'app/admin/*'
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 200
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/features/**/*'
+  ExcludedMethods: ['describe', 'context']
+  Max: 40
+
+Metrics/AbcSize:
+  Max: 17

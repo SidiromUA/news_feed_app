@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   def index
     if user_signed_in?
       @articles = Article.published.page(params[:page])
-    else 
+    else
       @articles = Article.covered.published.page(params[:page])
     end
   end
@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
   def show
     if user_signed_in?
       @article = Article.published.find(params[:id])
-    else 
+    else
       @article = Article.covered.published.find(params[:id])
     end
   end
@@ -31,7 +31,7 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def edit;end
+  def edit; end
 
   def update
     if @article.update(article_params)
@@ -58,6 +58,6 @@ class ArticlesController < ApplicationController
   end
 
   def handle_record_not_found
-    render file: "#{Rails.root}/public/404.html" , status: 404
+    render file: "#{Rails.root}/public/404.html", status: 404
   end
 end
