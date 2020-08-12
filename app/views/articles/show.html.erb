@@ -8,7 +8,6 @@
   </section>
   <section class="article-body">
     <%= image_tag @article.image.url(:large), class: 'img-show' if @article.image? %>
-    <%= @article.content %><br>
-    <%= link_to 'Back', articles_path %>
+    <%= @article.content %>
   </section>
 </article>
